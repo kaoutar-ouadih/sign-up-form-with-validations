@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="introSection">
+      <h1>Learn to code by watching others</h1>
+
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. </p>
+    </div>
+    <div class="formSection">
+      <div id="freeTrial">
+        <p id="trial"> <strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+      </div> 
+      <form>
+        <div class="input-group">
+          <input type="text" name="firstName" id="firstName" placeholder="First Name" onkeyup="validateFirstName()">
+          <span id="nameErrorIcon"></span>
+          <p class="errors"><em id="first-name-error"></em></p>
+        </div>
+        <div class="input-group">
+          <input type="text"name="lastName" id="lastName" placeholder="Last Name" onkeyup="validateLastName()">
+          <span id="lastNameErrorIcon"></span>
+          <p class="errors"><em id="last-name-error"></em></p>
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" id="email" placeholder="Email Address" onkeyup="validateEmail()">
+          <span id="emailErrorIcon"></span>
+          <p class="errors"><em id="email-error"></em></p>
+        </div>
+        <div class="input-group">
+          <input type="password" name="password" id="password" placeholder="Password" onkeyup="validatePassword()">
+          <span id="passwordErrorIcon"></span>
+          <p class="errors"><em id="password-error"></em></p>
+        </div>
+        <button type="submit" onclick="return validateForm()">Claim your free trial</button>
+        <p id="terms">By clicking the button, you are agreeing to our <a href=""><strong>Terms and Services</strong></a></p>
+      </form> 
+    </div>
+  </div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>
