@@ -20,7 +20,7 @@
     
   }
   .introSection{
-    width: 50%;
+    width: 45%;
     color: white;
   }
   .introSection h1{
@@ -33,7 +33,7 @@
     font-size: 0.9rem;
   }
   .formSection{
-    width: 50%;
+    width: 45%;
   }
   #freeTrial{
     background-color: hsl(248, 32%, 49%);
