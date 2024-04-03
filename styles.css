@@ -111,6 +111,9 @@
     right: 10px;
     bottom: 10px;
   }
+  .red-placeholder::placeholder {
+    color: hsl(0, 100%, 74%);
+    }
   @media(max-width:610px){
     .container{
       flex-direction: column;
